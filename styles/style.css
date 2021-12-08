@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+    --bg-purple: rgb(140, 0, 255);
+}
+
+#main-header {
+    background-color: var(--bg-purple);
+    color: white;
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.btn {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bg-purple);
+    border: 1px solid var(--bg-purple);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--bg-purple);
+}
+
+.btn:hover {
+    background-color: rgb(79, 10, 190);
+    border-color: rgb(79, 10, 190);
+}
+
+.btn-alt:hover {
+    background-color: rgb(230, 201, 252);
+    border-color: transparent;
+}
