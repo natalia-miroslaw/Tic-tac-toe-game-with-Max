@@ -26,13 +26,14 @@
 	<main>
 		<aside class="modal" id="config-overlay">
 			<h2>Choose your name</h2>
-			<form class="form-control">
-				<div>
+			<form>
+				<div class="form-control">
 					<label for="playername">Player name</label>
-					<input type="text" name="playername" id="playername">
+					<input type="text" name="playername" id="playername" required>
 				</div>
+				<p id="config-errors"></p>
 				<div>
-					<button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>		<!-- type button w środku form nie! zatwierdza formularza-->
+					<button type="reset" class="btn btn-alt" id="cancel-config-btn">Cancel</button>		<!-- type button w środku form nie! zatwierdza formularza-->
 					<button type="submit" class="btn">Confirm</button>
 				</div>
 			</form>
