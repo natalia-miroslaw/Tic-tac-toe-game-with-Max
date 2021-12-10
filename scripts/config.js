@@ -1,4 +1,5 @@
-function openPlayerConfig() {
+function openPlayerConfig(event) {
+  editedPlayer = +event.target.dataset.playerid;  //sprawdza, który btn kliknięty - player 1 czy 2
   playerConfigOverlayElement.style.display = 'block';
   backdropElement.style.display = 'block';
 }
@@ -8,6 +9,7 @@ function closePlayerConfig() {
   backdropElement.style.display = 'none';
   formElement.firstElementChild.classList.remove('error');
   errorsOutputElement.textContent = '';
+  document.getElementById('playername').value = '';
 }
 
 function savePlayerConfig(event) {
@@ -30,4 +32,11 @@ function savePlayerConfig(event) {
     errorsOutputElement.textContent = 'Please enter a valid name!';
     return;                                 //return stops executing a function!
   }
+
+  const updatedPlayerDataElement = document.getElementById('player-' + editedPlayer + '-data');
+  updatedPlayerDataElement.children[1].textContent = enteredPlayerName;
+
+  players[editedPlayer - 1].name = enteredPlayerName;
+
+  closePlayerConfig();
 }
